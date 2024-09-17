@@ -1,2 +1,19 @@
 <p>home works!</p>
 <app-content-list></app-content-list>
+
+<ul>
+  <li *ngFor="let user of users">
+      {{user}}
+
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let user of users1; let i = index">
+    {{user.name}}
+    {{i}}
+
+    <strong *ngIf="user.age === 25" appHighlight>{{user.name}}</strong>
+    <span *ngIf="user.age !== 27">{{user.name}}</span>
+  </li>
+</ul>
