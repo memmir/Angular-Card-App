@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit{
+
+  username: string = '';
+
+  constructor(
+    private userService: UserService,
+  ) {
+  }
+
+  ngOnInit() {
+    this.username = this.userService.username;
+  }
 
 }
