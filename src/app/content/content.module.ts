@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContentListComponent} from "./content-list/content-list.component";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -11,7 +12,8 @@ import {ContentListComponent} from "./content-list/content-list.component";
   ],
   imports: [
     CommonModule,
-    ContentListComponent
+    ContentListComponent,
+    HttpClientModule,
   ]
 })
 export class ContentModule { }
